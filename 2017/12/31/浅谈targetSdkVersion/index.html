@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/31/浅谈targetSdkVersion/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="在app/build.gradle中有个参数targetSdkVersion，标志着应用打包出来的版本  如果targetSdkVersion&amp;lt;23,那么android6.0（SDK23）的新特性就不用去适配了（动态申请权限），这个与你手机上的android版本无关，比如可以在android7.0的手机上安装targetSdkVersion=22的应用，这个应用可以不用去动态申请权限。你不">
-<meta property="og:updated_time" content="2017-12-31T12:04:20.200Z">
+<meta property="og:updated_time" content="2017-12-31T12:19:14.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈targetSdkVersion">
 <meta name="twitter:description" content="在app/build.gradle中有个参数targetSdkVersion，标志着应用打包出来的版本  如果targetSdkVersion&amp;lt;23,那么android6.0（SDK23）的新特性就不用去适配了（动态申请权限），这个与你手机上的android版本无关，比如可以在android7.0的手机上安装targetSdkVersion=22的应用，这个应用可以不用去动态申请权限。你不">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -90,33 +90,15 @@
 </li>
 <li><p>如果targetSdkVersion&lt;23,那么android6.0（SDK23）的新特性就不用去适配了（动态申请权限），这个与你手机上的android版本无关，比如可以在android7.0的手机上安装targetSdkVersion=22的应用，这个应用可以不用去动态申请权限。<br>你不想适配6.0或者7.0，那么就把targetSdkVersion设置为22（5.1）。</p>
 </li>
-<li><p>在targetSdkVersion&lt;23的情况下，该怎么判断有没有权限呢？<br>```<br>public static boolean checkPermission(Context content, String permission){</p>
-<pre><code>boolean result = true;
-
-int targetSdkVersion;
-try {
-     final PackageInfo info = content.getPackageManager().getPackageInfo(
-             content.getPackageName(), 0);
-     targetSdkVersion = info.applicationInfo.targetSdkVersion;
- } catch (PackageManager.NameNotFoundException e) {
-     e.printStackTrace();
- }
-
- if (targetSdkVersion &gt;= Build.VERSION_CODES.M) {
-             result = content.checkSelfPermission(permission)
-                     == PackageManager.PERMISSION_GRANTED;
-         } else {
-             result = PermissionChecker.checkSelfPermission(content, permission)
-                     == PermissionChecker.PERMISSION_GRANTED;
-         }
-</code></pre><p>return result;<br>}</p>
+<li><p>在targetSdkVersion&lt;23的情况下，该怎么判断有没有权限呢？</p>
 </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> public static boolean checkPermission(Context content, String permission)&#123;</span><br><span class="line">       boolean result = true;</span><br><span class="line">       </span><br><span class="line">       int targetSdkVersion;</span><br><span class="line">       try &#123;</span><br><span class="line">            final PackageInfo info = content.getPackageManager().getPackageInfo(</span><br><span class="line">                    content.getPackageName(), 0);</span><br><span class="line">            targetSdkVersion = info.applicationInfo.targetSdkVersion;</span><br><span class="line">        &#125; catch (PackageManager.NameNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (targetSdkVersion &gt;= Build.VERSION_CODES.M) &#123;</span><br><span class="line">                    result = content.checkSelfPermission(permission)</span><br><span class="line">                            == PackageManager.PERMISSION_GRANTED;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    result = PermissionChecker.checkSelfPermission(content, permission)</span><br><span class="line">                            == PermissionChecker.PERMISSION_GRANTED;</span><br><span class="line">                &#125;</span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/31/浅谈targetSdkVersion/" data-id="cjbuqqx8e0007tkuw81rw49ob" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2017/12/31/浅谈targetSdkVersion/" data-id="cjbv3r3p00008xouw1dhj5l2y" class="article-share-link">Compartir</a>
       
       
     </footer>
@@ -126,7 +108,7 @@ try {
 <nav id="article-nav">
   
     <a href="/2017/12/31/工作有感/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
+      <strong class="article-nav-caption">Nuevo</strong>
       <div class="article-nav-title">
         
           工作有感-2017(第一份工作)
@@ -136,7 +118,7 @@ try {
   
   
     <a href="/2017/12/31/github 存放图片（可以当仓库）/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Viejo</strong>
       <div class="article-nav-title">github 存放图片（可以当仓库）</div>
     </a>
   
@@ -159,9 +141,9 @@ try {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archivos</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
     </div>
   </div>
 
@@ -169,9 +151,13 @@ try {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Posts recientes</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/01/此酒引新（总结2017）/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2017/12/31/Andfix 踩坑记录/">Andfix 踩坑记录</a>
@@ -189,10 +175,6 @@ try {
             <a href="/2017/12/31/github 存放图片（可以当仓库）/">github 存放图片（可以当仓库）</a>
           </li>
         
-          <li>
-            <a href="/2017/12/31/复制一个app（Hbuilder离线打包）/">复制一个app（Hbuilder离线打包）</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -205,8 +187,8 @@ try {
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 John Doe<br>
+      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
