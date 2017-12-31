@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,173 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-github 存放图片（可以当仓库）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/31/github 存放图片（可以当仓库）/" class="article-date">
+  <time datetime="2017-12-31T11:57:22.460Z" itemprop="datePublished">2017-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/31/github 存放图片（可以当仓库）/">github 存放图片（可以当仓库）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们都要用到图片什么的，这个可以当作仓库用。</span><br></pre></td></tr></table></figure>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><blockquote>
+<p>将图片放在仓库里面<br>github 图片链接格式：<br>(<a href="http://github.com/yourname/your-repository/raw/master/images-folder/xxx.png" target="_blank" rel="noopener">http://github.com/yourname/your-repository/raw/master/images-folder/xxx.png</a>)<br>要自己设定的：yourname, your-repository, your-folder, xxx.png。<br>yourname — 你的帐号<br>your-respository — 你的 project 名<br>/raw/master/ －－－固定的写法(master应该是主支线…自己根据着换，一般来说不用换)<br>images-folder — 你存放图片的文件夹，如果是直接放在 project 的项目根目录的話，就可以省略這個<br>xxx.png — 你的图片名</p>
+</blockquote>
+<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">很简单吧，也可以用七牛云，万一github被墙了呢...</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/31/github 存放图片（可以当仓库）/" data-id="cjbuq342700012guwbgpqrcxq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-复制一个app（Hbuilder离线打包）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/31/复制一个app（Hbuilder离线打包）/" class="article-date">
+  <time datetime="2017-12-31T11:56:06.551Z" itemprop="datePublished">2017-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/31/复制一个app（Hbuilder离线打包）/">复制一个app（Hbuilder离线打包）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">客户的要求，真是......还是记录下复制步骤，要加的东西太多，好记性不如烂笔头啊</span><br></pre></td></tr></table></figure>
+<h2 id="粘贴复制重命名"><a href="#粘贴复制重命名" class="headerlink" title="粘贴复制重命名"></a>粘贴复制重命名</h2><ol>
+<li><p>打开androidstudio导入项目，修改它的包名，名称</p>
+</li>
+<li><p>根据包名申请各种第三方（facebook,twitter,个推，友盟，googleanalytics）</p>
+</li>
+<li><p>修改string里的facebook和twitter的第三方参数（已有注释）</p>
+</li>
+<li><p>在AndroidManfest.xml修改facebook分享的值</p>
+</li>
+</ol>
+<p><img src="http://ogda5d704.bkt.clouddn.com/fuzhi1.png" alt="facebook分享"></p>
+<ol>
+<li><p>在AndroidManfest.xml修改个推的值AppID（3）AppSecret（1）AppKey（1）</p>
+</li>
+<li><p>在AndroidManfest.xml修改包名，替换所有的文件</p>
+</li>
+</ol>
+<p><img src="http://ogda5d704.bkt.clouddn.com/fuzhi2.png" alt="facebook分享"></p>
+<ol>
+<li><p>在AndroidManfest.xml修改友盟的value</p>
+</li>
+<li><p>配置 googleanalytics 下载相应的google-server.json，放在app目录下</p>
+</li>
+<li><p>修改res/xml/ecommerce_tracker.xml 里的 ga_trackingId 的值</p>
+</li>
+</ol>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">还有各种资源图片的修改，（不写了）</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/31/复制一个app（Hbuilder离线打包）/" data-id="cjbuq342c00032guw8ierw81d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git 学习记录（项目初始化跟踪远程仓库）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/31/git 学习记录（项目初始化跟踪远程仓库）/" class="article-date">
+  <time datetime="2017-12-31T11:54:53.189Z" itemprop="datePublished">2017-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/31/git 学习记录（项目初始化跟踪远程仓库）/">git 学习记录（项目初始化跟踪远程仓库）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>好记性不如烂笔头，量变引质变，记录下git学习记录。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">首先大家的电脑都安装git了吧，没有就自行google安装，这里就不列出步骤了</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里先介绍一种情况</p>
+<h3 id="你已经有一个项目在电脑上，需要git-上传到开源中国仓库"><a href="#你已经有一个项目在电脑上，需要git-上传到开源中国仓库" class="headerlink" title="你已经有一个项目在电脑上，需要git 上传到开源中国仓库"></a>你已经有一个项目在电脑上，需要git 上传到开源中国仓库</h3><p>(1). 在项目的目录下git bash<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
+<p>这样就有一个git 项目了,这边可以先放着。</p>
+</blockquote>
+<p>(2). 在git开源中国中创建一个项目，如图所示</p>
+<p><img src="http://ogda5d704.bkt.clouddn.com/git.png" alt="git项目创建"></p>
+<blockquote>
+<p>复制项目地址</p>
+</blockquote>
+<p><img src="http://ogda5d704.bkt.clouddn.com/fuzhigit.png" alt="地址"></p>
+<p>(3). 在刚才的项目里打开git bash，输入<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@git.oschina.net:XXXXXX.git</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>origin 后面是你刚才复制的地址<br>可以检查下添加成功了吗    git remote -v</p>
+</blockquote>
+<p>(4). 现在在添加你的忽略文件吧   .gitignore</p>
+<blockquote>
+<p>看你心情添不添加，建议最好添加<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .gitignore</span><br><span class="line">git commit -m<span class="string">'first commit'</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>(5). 最后跟踪远程仓库<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br>刷新你的开源中国，看下添加成功了吗？</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这里就介绍这一种情况啦，如有错误之处，多谢指出。</span><br><span class="line">上传到github的步骤应该差不多。</span><br></pre></td></tr></table></figure>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/31/git 学习记录（项目初始化跟踪远程仓库）/" data-id="cjbuq341w00002guwiplwcp79" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-插件的简单配置（hbuilder）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -107,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/31/插件的简单配置（hbuilder）/" data-id="cjbupsh420001p0uwk4gp8kfk" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2017/12/31/插件的简单配置（hbuilder）/" data-id="cjbuq342e00042guw5i8sl2i0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/31/hello-world/" data-id="cjbupsh3s0000p0uwax2z0rgv" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2017/12/31/hello-world/" data-id="cjbuq342a00022guwdqbau0bn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +345,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
     </div>
@@ -188,9 +355,21 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/12/31/github 存放图片（可以当仓库）/">github 存放图片（可以当仓库）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/31/复制一个app（Hbuilder离线打包）/">复制一个app（Hbuilder离线打包）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/31/git 学习记录（项目初始化跟踪远程仓库）/">git 学习记录（项目初始化跟踪远程仓库）</a>
+          </li>
         
           <li>
             <a href="/2017/12/31/插件的简单配置（hbuilder）/">插件的简单配置（Hbuilder）</a>
