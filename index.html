@@ -354,48 +354,14 @@
 
       
         
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>元旦放假，对于人潮的恐惧，于是在家搞起了hexo，很久之前就想干的事情了，说干就干，陆陆续续的干了一天，差不多都建好了，还差一个域名解析（域名还在来的路上呢…），基本可以访问，顺便把我万年前写的博客放上去了，嗯，还算有个样子。废话不多说，先看看成果<a href="https://keien411.github.io/" target="_blank" rel="noopener">keien</a>。</p>
-<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><ul>
-<li>网上应该都有很多教程了，我找了一篇号称最详细的<a href="http://www.lovebxm.com/2017/05/30/buildBlog/#%E5%8F%91%E8%A1%A8%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0" target="_blank" rel="noopener">hexo搭建</a>,前面的几个步骤都是搭建环境，比如搭建 Node.js 环境，搭建 Git 环境，都是相对比较简单的，我的电脑这些的环境都搭好了，直接跳过。简单提下注意的点</li>
-</ul>
-<ol>
-<li>在github上建的仓库名称要是  yourname.github.io , 比如我的名字是keien411,那么仓库名称就是keien411.github.io</li>
-</ol>
-<blockquote>
-<p>啊，就是注意这一点就好了。</p>
-</blockquote>
-<ul>
-<li><p>然后就是搭建hexo的环境了，执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接下来依次执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init keien411.github.io</span><br><span class="line">cd keien411.github.io</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不出意外，你用电脑访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，就能看到本地的博客搭建好了，接下来就是关联 Hexo 与 GitHub Pages，上面的最详细已经详细介绍了，我在这里提一点</p>
-</li>
-</ul>
-<ol>
-<li>设置SSH密钥的时候不要设置密码</li>
-</ol>
-<ul>
-<li>这样就差不多成功了！</li>
-</ul>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>我发布的文章点击分类和标签是404，解决方案</p>
-<ol>
-<li><p>首先查看你的source下有没有 categories 和 tags 的文件夹，如果没有，执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot; </span><br><span class="line"></span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分别编辑 /tags/index.md 和 /categories/index.md </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>最后重新部署，你就可以点击分类或者标签了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>教程这东西不会面面俱到，还是多看看官方的文档才是最实在的</p>
-
-          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>元旦放假，对于人潮的恐惧，于是在家搞起了hexo，很久之前就想干的事情了，说干就干，陆陆续续的干了一天，差不多都建好了，还差一个域名解析（域名还在来的路上呢…），基本可以访问，顺便把我万年前写的博客放上去了，嗯，还算有个样子。废话不多说，先看看成果<a href="https://keien411.github.io/" target="_blank" rel="noopener">keien</a>。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/01/分享hexo建blog遇到的坑/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
